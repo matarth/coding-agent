@@ -1,0 +1,1 @@
+Test for an coding agent setup.
