@@ -26,11 +26,11 @@ Standalone run for debugging (speaks the MCP protocol over stdio, not
 meant for manual interaction):
     python3 db_server.py
 """
-from mcp.server.fastmcp import FastMCP
+from mcp.server import MCPServer
 
 from db_readonly_tool import DbName, run_readonly_query
 
-mcp = FastMCP("db-readonly")
+mcp = MCPServer("db-readonly")
 
 _ALLOWED_DBS = ", ".join(d.value for d in DbName)
 

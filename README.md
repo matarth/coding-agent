@@ -36,10 +36,11 @@ the `mcp__db-readonly__query_db_readonly` tool
 
 ### Prerequisites
 
-- **Python packages** (installed e.g. via `pip3 install --user ...`):
-  - `mcp` (>=1.x, must provide `mcp.server.fastmcp.FastMCP`)
-  - `psycopg2-binary`
-  - `python-dotenv`
+- **Python packages** — install with:
+  ```
+  pip3 install --user "mcp>=1.0.0" psycopg2-binary python-dotenv
+  ```
+  (`mcp` must provide `mcp.server.fastmcp.FastMCP`)
 - **Local Postgres (Docker)** reachable with the anonymized databases already
   loaded, one of: `shopify_integration`, `project_service`,
   `notification_service`, `avantro_admin`, `search_service`, `order_service`,
