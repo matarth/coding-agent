@@ -1,0 +1,8 @@
+.claude/tools/db_readonly/.env
+.claude/tools/db_readonly/__pycache__/
+.claude/tools/night_coder/reports/*.md
+.claude/tools/night_coder/__pycache__/
+.claude/tools/docblock_checker/reports/*.json
+.claude/tools/docblock_checker/reports/*.html
+.claude/tools/docblock_checker/__pycache__/
+/.claude/tools/db_readonly/.env

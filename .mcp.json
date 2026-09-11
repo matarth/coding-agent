@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "asana": {
+      "type": "http",
+      "url": "https://mcp.asana.com/v2/mcp",
+      "oauth": {
+        "clientId": "1218233550415000",
+        "callbackPort": 12001
+      }
+    }
+  }
+}
