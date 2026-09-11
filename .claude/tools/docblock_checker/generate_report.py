@@ -92,7 +92,13 @@ function render() {
   const search = document.getElementById("search").value.toLowerCase();
   const statusFilter = document.getElementById("statusFilter").value;
   const entries = Object.entries(REPORT.entries || {})
-    .map(([key, e]) => ({ key, ...e }))
+    .map(([key, e]) => {
+      // Entries are keyed "<file>#<symbol>" and don't repeat those as fields - derive them here.
+      const sep = key.lastIndexOf("#");
+      const file = sep === -1 ? key : key.slice(0, sep);
+      const symbol = sep === -1 ? "" : key.slice(sep + 1);
+      return { key, file, symbol, ...e };
+    })
     .sort((a, b) => (a.file + a.symbol).localeCompare(b.file + b.symbol));
 
   const counts = {};

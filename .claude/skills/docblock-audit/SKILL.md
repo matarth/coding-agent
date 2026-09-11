@@ -37,7 +37,7 @@ docblock text, and the body of the code it documents.
 Read `.claude/tools/docblock_checker/reports/docblock_report.json`
 (create it as `{"entries": {}}` if it doesn't exist yet). Entries are
 keyed `"<file>#<symbol>"` and hold `docblock_hash`, `last_checked`,
-`status`, and `findings` from the last check.
+`line`, `status`, and `findings` from the last check.
 
 ## 3. Decide what needs (re-)checking
 
@@ -69,7 +69,7 @@ not the exploration behind them.
 
 For each symbol the subagent returned a verdict for, update its entry:
 new `docblock_hash`, `last_checked` set to now, and the returned
-`status`/`findings`. Remove entries for symbols/files no longer present
+`line`/`status`/`findings`. Remove entries for symbols/files no longer present
 in the codebase. Write the updated JSON back to
 `.claude/tools/docblock_checker/reports/docblock_report.json`.
 
